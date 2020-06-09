@@ -7,10 +7,13 @@ class Main {
         int b = sc.nextInt();
         int c = sc.nextInt();
         
-        System.out.println(sort(a,b,c));
         
-    }    
-    public static sort(int a, int b, int c) {
+        Int[] arr = new Int[3];
+        arr[0]=a;
+        arr[1]=b;
+        arr[2]=c;
         
+        
+        return Arrays.sort(arr);
     }
 }
