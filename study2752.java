@@ -13,15 +13,13 @@ class Main {
         arr[1]=b;
         arr[2]=c;
         
-        sort(arr);
+        Arrays.sort(arr);
 
-
-    }
-    static void sort(int[] arr){
-        int[] sortArr = (int[]) Arrays.sort(arr);
-        for(int i : sortArr) {
-
-        System.out.println(i);
-        }
+        for(int i = 0; i < 3 ; i++) {
+          if(i<2)
+            System.out.print(arr[i]+" ");
+          else
+            System.out.print(arr[i]);
+		}
     }
 }
