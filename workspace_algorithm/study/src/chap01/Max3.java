@@ -2,7 +2,7 @@ package chap01;
 
 import java.util.Scanner;
 
-// 3°³ÀÇ Á¤¼ı°ªÀ» ÀÔ·ÂÇÏ°í ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù.
+// 3ê°œì˜ ì •ìˆ«ê°’ì„ ì…ë ¥í•˜ê³  ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤.
 
 public class Max3 {
 
@@ -10,12 +10,12 @@ public class Max3 {
 		// TODO Auto-generated method stub
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("¼¼ Á¤¼öÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù.");
-		System.out.println("aÀÇ °ª : ");
+		System.out.println("ì„¸ ì •ìˆ˜ì˜ ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤.");
+		System.out.println("aì˜ ê°’ : ");
 		int a = stdIn.nextInt();
-		System.out.println("bÀÇ °ª : ");
+		System.out.println("bì˜ ê°’ : ");
 		int b = stdIn.nextInt();
-		System.out.println("cÀÇ °ª : ");
+		System.out.println("cì˜ ê°’ : ");
 		int c = stdIn.nextInt();
 
 		int max = a;
@@ -24,7 +24,7 @@ public class Max3 {
 		if (c > max)
 			max = c;
 
-		System.out.println("ÃÖ´ñ°ªÀº " + max + "ÀÔ´Ï´Ù.");
+		System.out.println("ìµœëŒ“ê°’ì€ " + max + "ì…ë‹ˆë‹¤.");
 	}
 
 }

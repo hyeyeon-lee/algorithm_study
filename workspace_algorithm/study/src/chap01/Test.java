@@ -2,7 +2,7 @@ package chap01;
 
 public class Test {
 
-	// Q1. ³× °ªÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÏ´Â ¹®Á¦
+	// Q1. ë„¤ ê°’ì˜ ìµœëŒ“ê°’ì„ êµ¬í•˜ëŠ” ë¬¸ì œ
 	static int max4(int a, int b, int c, int d) {
 		int max = a;
 		if (b > max)
@@ -15,7 +15,7 @@ public class Test {
 		return max;
 	}
 
-	// Q2. ¼¼ °ªÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ´Â ¹®Á¦
+	// Q2. ì„¸ ê°’ì˜ ìµœì†Ÿê°’ì„ êµ¬í•˜ëŠ” ë¬¸ì œ
 	static int min3(int a, int b, int c) {
 		int min = a;
 		if (min > b)
@@ -25,7 +25,7 @@ public class Test {
 		return min;
 	}
 
-	// Q3. ³× °ªÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ´Â ¹®Á¦
+	// Q3. ë„¤ ê°’ì˜ ìµœì†Ÿê°’ì„ êµ¬í•˜ëŠ” ë¬¸ì œ
 	static int min4(int a, int b, int c, int d) {
 		int min = a;
 		if (min > b)
@@ -37,7 +37,7 @@ public class Test {
 		return min;
 	}
 
-	// Q4. ¼¼ °ªÀÇ ´ë¼Ò °ü°è 13Á¾·ùÀÇ ¸ğµç Á¶ÇÕ¿¡ ´ëÇØ Áß¾Ó°ª Ãâ·ÂÇÏ´Â ¹®Á¦
+	// Q4. ì„¸ ê°’ì˜ ëŒ€ì†Œ ê´€ê³„ 13ì¢…ë¥˜ì˜ ëª¨ë“  ì¡°í•©ì— ëŒ€í•´ ì¤‘ì•™ê°’ ì¶œë ¥í•˜ëŠ” ë¬¸ì œ
 	static int med13(int a, int b, int c) {
 		if (a >= b) {
 			if (a > b) {
@@ -82,8 +82,8 @@ public class Test {
 		}
 	}
 
-	// Q5. ´ÙÀ½ÀÇ Áß¾Ó°ªÀÌ Median.med3 º¸´Ù È¿À²ÀÌ ¶³¾îÁö´Â ÀÌÀ¯´Â?
-	// a. ¿¬»êÀÌ ³Ê¹« º¹ÀâÇØ¼­
+	// Q5. ë‹¤ìŒì˜ ì¤‘ì•™ê°’ì´ Median.med3 ë³´ë‹¤ íš¨ìœ¨ì´ ë–¨ì–´ì§€ëŠ” ì´ìœ ëŠ”?
+	// a. ì—°ì‚°ì´ ë„ˆë¬´ ë³µì¡í•´ì„œ
 	static int med3(int a, int b, int c) {
 		if ((b >= a && c <= a) || (b <= a && c >= a))
 			return a;
