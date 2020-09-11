@@ -16,16 +16,13 @@ public class SumFor {
 
 		int sum = 0;
 
-		for (int i = 0; i <= n; i++) {
+		for (int i = 1; i <= n; i++) {
 			// Q7. 출력 내용 변경하기
-			if (i == 0)
-				continue;
-			sum += i;
-			System.out.print(i);
-			if (i == n)
-				System.out.print(" = ");
+			if (i < n)
+				System.out.print(i + " + ");
 			else
-				System.out.print(" + ");
+				System.out.print(i + " = ");
+			sum += i;
 		}
 		System.out.print(sum);
 		System.out.println();
