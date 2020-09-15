@@ -13,7 +13,10 @@ public class SumGauss {
 		System.out.println("n의 값:");
 		int n = stdIn.nextInt();
 
-		int sum = (1 + n) * n / 2;
+		// 내가 입력한 답
+		// int sum = (1 + n) * n / 2;
+		// 가우스 공식 정답
+		int sum = (n + 1) * (n / 2) + (n % 2 == 1 ? (n + 1) / 2 : 0);
 
 		System.out.println(sum);
 	}

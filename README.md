@@ -29,3 +29,17 @@
 ## 자료구조와 함께 배우는 알고리즘 입문 (JAVA 편)
 
 ### chapter 01. 기본 알고리즘
+
+- Max3
+- Max3m
+- Test(Q1, Q2, Q3, Q4, Q5)
+- Median
+- JudgeSign
+- SumWhile (Q6)
+- SumFor (Q7)
+- SumGauss (Q8)
+- SumOf (Q9)
+- SumForPos
+- Quest10
+- Quest11
+- Digit

@@ -2,6 +2,7 @@ package chap01;
 
 public class SumOf {
 
+	// Q9. A,B 포함 사이의 모든 정수 합
 	static int sumof(int a, int b) {
 		int sum = 0;
 

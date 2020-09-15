@@ -17,8 +17,8 @@ public class SumWhile {
 		int sum = 0;
 		int i = 1;
 
-		while(i<=n) { // i가 n이하면 반복
-			sum+=i; // sum = sum + i
+		while (i <= n) { // i가 n이하면 반복
+			sum += i; // sum = sum + i
 			i++; // i 1증가
 		}
 		// Q6. 최종 i의 값이 n+1
