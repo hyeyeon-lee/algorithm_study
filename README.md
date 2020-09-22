@@ -50,3 +50,8 @@
 - Quest10
 - Quest11
 - Digit
+- Multi99Table
+- Quest12
+- Quest13
+- Quest14
+- TriangleLB
