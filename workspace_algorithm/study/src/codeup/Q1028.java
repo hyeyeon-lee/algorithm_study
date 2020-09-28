@@ -8,8 +8,9 @@ public class Q1028 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
-		long num = s.nextLong();
-		System.out.println(num);
+		String num = s.next();
+		// 없었는데 생겼다는 java의 unsigned int 사용
+		System.out.println(Integer.toUnsignedString(Integer.parseUnsignedInt(num)));
 	}
 
 }
