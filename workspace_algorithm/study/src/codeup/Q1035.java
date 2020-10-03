@@ -1,6 +1,8 @@
+package codeup;
+
 import java.util.Scanner;
 
-public class Main{
+public class Q1035 {
 
 	// 1035 : [기초-출력변환] 16진 정수 1개 입력받아 8진수로 출력하기(설명)
 	public static void main(String[] args) {
