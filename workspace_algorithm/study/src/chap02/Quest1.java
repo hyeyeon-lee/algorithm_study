@@ -18,7 +18,7 @@ public class Quest1 {
 		Random rand = new Random();
 
 		System.out.println("키의 최댓값을 구합니다.");
-		int num = rand.nextInt(10); // 배열의 요솟수 입력
+		int num = 1 + rand.nextInt(10); // 배열의 요솟수 입력 (추가) 1부터!
 		System.out.println("사람 수: " + num);
 
 		int[] height = new int[num]; // 요솟수가 num인 배열
