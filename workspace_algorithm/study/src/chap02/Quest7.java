@@ -37,36 +37,41 @@ public class Quest7 {
 		} while (retry == 1);
 	}
 
-	// 정숫값 x를 r진수로 변환하여 배열 d에 윗자리부터 넣어두고 자릿수를 반환
+	// 정숫값 x를 r진수로 변환하여 배열 d에 아랫자리부터 넣어두고 자릿수를 반환
 	static int cardConv(int x, int r, char[] d) {
+		int n = ((Integer) x).toString().length(); // 변환 전의 자릿수
 		int digits = 0; // 변환 후 자릿수
 		String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-		System.out.println(r + "|" + "     " + x);
-		System.out.println(" + ------");
+		System.out.printf(String.format("%%2d | %%%dd\n", n), r, x);
+		// System.out.println(r + "|" + " " + x);
+		// System.out.println(" + ------");
 
 		do {
+			System.out.printf("   +");
+			for (int i = 0; i < n + 2; i++)
+				System.out.print('-');
+			System.out.println();
+
 			int nmg = x % r;
+			if (x / r != 0)
+				System.out.printf(String.format("%%2d | %%%dd    … %%d\n", n), r, x / r, nmg);
+			 else
+				System.out.printf(String.format("     %%%dd    … %%d\n", n), x / r, nmg);
+
 			d[digits++] = dchar.charAt(nmg);// r로 나눈 나머지를 저장
 			x /= r;
-			if (x != 0){
-				System.out.println(r + "|" + "     " + x + "   …" + nmg);
-				System.out.println(" + ------");
-			} else {
-				System.out.println("  " + "     " + x + "   …" + nmg);
+		}while(x!=0);
 
-			}
-		} while (x != 0);
+	// 뒤집기
+	char temp;for(
+	int i = 0;i<digits/2;i++)
+	{
+		temp = d[i];
+		d[i] = d[digits - i - 1];
+		d[digits - i - 1] = temp;
 
-		// 뒤집기
-		char temp;
-		for (int i = 0; i < digits / 2; i++) {
-			temp = d[i];
-			d[i] = d[digits - i - 1];
-			d[digits - i - 1] = temp;
-
-		}
-		return digits;
-	}
+	}return digits;
+}
 
 }
