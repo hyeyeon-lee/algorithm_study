@@ -43,35 +43,38 @@ public class Quest7 {
 		int digits = 0; // 변환 후 자릿수
 		String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+		// String format을 이용하여 형식 맞추기
 		System.out.printf(String.format("%%2d | %%%dd\n", n), r, x);
 		// System.out.println(r + "|" + " " + x);
 		// System.out.println(" + ------");
 
 		do {
+			// 자릿수보다 조금 여유있게 -출력
 			System.out.printf("   +");
 			for (int i = 0; i < n + 2; i++)
 				System.out.print('-');
 			System.out.println();
 
 			int nmg = x % r;
-			if (x / r != 0)
-				System.out.printf(String.format("%%2d | %%%dd    … %%d\n", n), r, x / r, nmg);
-			 else
-				System.out.printf(String.format("     %%%dd    … %%d\n", n), x / r, nmg);
+			int mok = x / r;
+			if (mok != 0)
+				System.out.printf(String.format("%%2d | %%%dd    … %%d\n", n), r, mok, nmg);
+			else
+				System.out.printf(String.format("     %%%dd    … %%d\n", n), mok, nmg);
 
 			d[digits++] = dchar.charAt(nmg);// r로 나눈 나머지를 저장
-			x /= r;
-		}while(x!=0);
+			x = mok;
+		} while (x != 0);
 
-	// 뒤집기
-	char temp;for(
-	int i = 0;i<digits/2;i++)
-	{
-		temp = d[i];
-		d[i] = d[digits - i - 1];
-		d[digits - i - 1] = temp;
+		// 뒤집기
+		char temp;
+		for (int i = 0; i < digits / 2; i++) {
+			temp = d[i];
+			d[i] = d[digits - i - 1];
+			d[digits - i - 1] = temp;
 
-	}return digits;
-}
+		}
+		return digits;
+	}
 
 }
