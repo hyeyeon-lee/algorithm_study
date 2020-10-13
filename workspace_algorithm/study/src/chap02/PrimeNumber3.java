@@ -15,9 +15,10 @@ public class PrimeNumber3 {
 			boolean flag = false;
 			for (int i = 1; prime[i] * prime[i] <= n; i++) { // 이미 찾은 소수로 나누기
 				counter += 2;
-				if (n % prime[i] == 0) // 나누어 떨어진다
+				if (n % prime[i] == 0) { // 나누어 떨어진다
 					flag = true;
-				break; // == 소수가 아니다, 반복 중지
+					break; // == 소수가 아니다, 반복 중지
+				}
 			}
 
 			if (!flag) { // 마지막까지 나누어 떨어지지 않는다면
