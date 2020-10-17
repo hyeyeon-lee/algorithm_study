@@ -55,6 +55,16 @@ public class Quest9 {
 				days += mdays[isLeap(y)][i];
 		}
 		return days;
+
+		/*
+		 * 모범답안
+		int days = d; // 일수
+
+		for (int i = 1; i < m; i++) // 1월~(m-1)월의 일 수를 더함
+			days += mdays[isLeap(y)][i - 1];
+
+		return 365 + isLeap(y) - days;
+		*/
 	}
 
 }
