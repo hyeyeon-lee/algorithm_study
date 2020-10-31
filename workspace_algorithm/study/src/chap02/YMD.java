@@ -30,14 +30,34 @@ public class YMD {
 	// n일 뒤의 날짜를 반환
 	YMD after(int n) {
 		YMD ymd = new YMD(this.y, this.m, this.d);
-		// todo
+
+		ymd.d += n;
+
+		while (ymd.d > mdays[isLeap(ymd.y)][ymd.m - 1]) {
+			ymd.d -= mdays[isLeap(ymd.y)][ymd.m - 1];
+			if (++ymd.m > 12) {
+				ymd.y++;
+				ymd.m = 1;
+			}
+		}
+
 		return ymd;
 	}
 
 	// n일 앞의 날짜를 반환
 	YMD before(int n) {
 		YMD ymd = new YMD(this.y, this.m, this.d);
-		// todo
+
+		ymd.d -= n;
+
+		while (ymd.d < 1) {
+			if (--ymd.m < 1) {
+				ymd.y--;
+				ymd.m = 12;
+			}
+			ymd.d += mdays[isLeap(ymd.y)][ymd.m - 1];
+		}
+
 		return ymd;
 	}
 
