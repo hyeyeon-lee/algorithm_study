@@ -23,5 +23,7 @@ public class Q1084 {
 
 		System.out.println(cnt);
 
+		s.close();
+
 	}
 }
