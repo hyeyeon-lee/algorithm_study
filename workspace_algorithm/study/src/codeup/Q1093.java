@@ -12,7 +12,7 @@ public class Q1093 {
 
 		for (int i = 0; i < num; i++) {
 			int sn = s.nextInt(); // 무작위로 부르기
-			arr[sn] = arr[sn] + 1;
+			arr[sn] = arr[sn] + 1; // 1번~23번
 		}
 
 		for (int i = 1; i < 24; i++) // 0번은 없음!! 1~23
