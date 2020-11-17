@@ -29,8 +29,8 @@ public class Q1098 {
 
 		}
 
-		for (int i = 1; i < w; i++) {
-			for (int j = 1; j < h; j++)
+		for (int i = 1; i < h; i++) {
+			for (int j = 1; j < w; j++)
 				System.out.printf("%d ", arr[i][j]);
 			System.out.println("");
 		}
