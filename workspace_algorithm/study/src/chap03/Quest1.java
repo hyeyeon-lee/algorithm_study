@@ -11,10 +11,8 @@ public class Quest1 {
 
 		a[n] = key; // 보초를 추가
 
-		for (i = 0; i < n; i++) {
-			if (a[i] == key) // 검색 성공
-				break;
-		}
+		for (i = 0; a[i] != key; i++)
+			;
 		return i == n ? -1 : i;
 	}
 
