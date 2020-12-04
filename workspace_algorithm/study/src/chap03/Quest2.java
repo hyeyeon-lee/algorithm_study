@@ -7,19 +7,19 @@ public class Quest2 {
 
 	// 요솟수가 n인 배열 a에서 key와 같은 요소를 선형 검색합니다.
 	static int seqSearchSen(int[] a, int n, int key) {
-		// td
-		System.out.printf("  | ");
+		System.out.print(String.format("%3s ", "|"));
 		for (int j = 0; j < a.length; j++) {
 			System.out.printf("%d ", j);
 		}
 		System.out.println();
 		System.out.println("---------------- ");
-		for (int i = 0; i < a.length; i++) {
-			System.out.print("  | ");
-			for(int k = 0; k < i; k++) System.out.print("  ");
-			System.out.println("*");
+
+		for (int i = 0; i < n; i++) {
+			System.out.print(String.format("%3s", "|"));
+			System.out.printf(String.format("%%%ds*\n", i * 2 + 1), "");
+
 			System.out.print(i + " | ");
-			for (int j = 0; j < a.length; j++) {
+			for (int j = 0; j < n; j++) {
 				System.out.printf("%d ", a[j]);
 			}
 			System.out.println("");
