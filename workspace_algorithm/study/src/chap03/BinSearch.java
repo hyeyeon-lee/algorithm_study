@@ -16,7 +16,7 @@ public class BinSearch {
 			else if (a[pc] < key)
 				pl = pc + 1; // 검색 범위가 뒤쪽으로 옮겨짐
 			else
-				pl = pc - 1; // 검색 범위를 앞쪽으로 옮김
+				pr = pc - 1; // 검색 범위를 앞쪽으로 옮김
 		} while (pl <= pr);
 
 		return -1;
@@ -28,20 +28,20 @@ public class BinSearch {
 
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("요솟수");
+		System.out.println("요솟수 :");
 		int num = stdIn.nextInt();
-		int[] x = new int[num];
+		int[] x = new int[num]; // 요솟수가 num인 배열
 
-		System.out.println("오름차순으로 입력하세요");
+		System.out.println("오름차순으로 입력하세요.");
 
-		System.out.println("x[0]:");
+		System.out.println("x[0]:"); // 첫 요소 입력
 		x[0] = stdIn.nextInt();
 
 		for (int i = 1; i < num; i++) {
 			do {
-				System.out.println("x[" + i + "]: ");
+				System.out.print("x[" + i + "]: ");
 				x[i] = stdIn.nextInt();
-			} while (x[i] < x[i - 1]);// 바로 앞의 요소보다 작으면 다시 입력
+			} while (x[i] < x[i - 1]);// 바로 앞의 요소보다 작으면 다시 입력 (0을 따로 입력 받는다)
 		}
 
 		System.out.println("검색할 값:"); // 키 값을 입력
@@ -49,7 +49,7 @@ public class BinSearch {
 		int idx = binSearch(x, num, ky);
 
 		if (idx == -1)
-			System.out.println("찾지 못함");
+			System.out.println("그 값의 요소가 없습니다.");
 		else
 			System.out.println(ky + "는 x[" + idx + "]에 있습니다.");
 
