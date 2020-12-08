@@ -35,6 +35,12 @@ public class Quest3 {
 		int count = searchIdx(arr, num, key, idx);
 
 		System.out.println("count: " + count);
+		if (count == 0) {
+			System.out.println("요소가 없습니다.");
+		} else {
+			for (int i = 0; i < count; i++)
+				System.out.println("x[" + idx[i] + "]");
+		}
 
 	}
 }
