@@ -1,5 +1,8 @@
 package codeup;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class Q1084 {
@@ -14,15 +17,25 @@ public class Q1084 {
 
 		int cnt = 0;
 
-		for (int i = 0; i < red; i++)
-			for (int j = 0; j < green; j++)
+		BufferedWriter bf = new BufferedWriter(new OutputStreamWriter(System.out));
+		for (int i = 0; i < red; i++) {
+			for (int j = 0; j < green; j++) {
+				String str = "";
 				for (int k = 0; k < blue; k++) {
-					System.out.println(i + " " + j + " " + k);
+					str += i + " " + j + " " + k + "\n";
 					cnt++;
 				}
+				try {
+					bf.write(str);
+					bf.flush();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
 
 		System.out.println(cnt);
-
 		s.close();
 
 	}
