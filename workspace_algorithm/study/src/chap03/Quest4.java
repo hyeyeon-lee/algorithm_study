@@ -17,18 +17,41 @@ public class Quest4 {
 		}
 
 		int key = s.nextInt();
-		binSearch(num, arr, key);
+
+		System.out.printf("%3s|", "");
+		for (int i = 0; i < num; i++) {
+			System.out.printf("%2d", i);
+		}
+		System.out.println("");
+		System.out.print("---+");
+		for (int i = 0; i < num * 2; i++) {
+			System.out.print("-");
+		}
+		System.out.print("--\n");
+
+		int idx = binSearch(num, arr, key);
+		if (idx < 0)
+			System.out.println("해당 요소가 없습니다.");
+		else
+			System.out.println(key + "는 x[" + idx + "]에 있습니다.");
+
 	}
 
 	static int binSearch(int n, int[] arr, int k) {
 
-		int pc = n / 2;
 		int pl = 0;
-		int pr = n;
+		int pr = n - 1;
 
-		for (int i = 0; i < n; i++) {
+		do {
+			int pc = (pl + pr) / 2;
+			if (k < arr[pc])
+				pr = pc - 1;
+			else if (k > arr[pc])
+				pl = pc + 1;
 
-		}
+			else
+				return pc;
+		} while (pl <= pr);
 
 		return -1;
 	}
