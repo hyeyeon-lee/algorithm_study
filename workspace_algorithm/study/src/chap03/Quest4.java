@@ -20,11 +20,11 @@ public class Quest4 {
 
 		System.out.printf("%3s|", "");
 		for (int i = 0; i < num; i++) {
-			System.out.printf("%2d", i);
+			System.out.printf("%4d", i);
 		}
 		System.out.println("");
 		System.out.print("---+");
-		for (int i = 0; i < num * 2; i++) {
+		for (int i = 0; i < num * 4; i++) {
 			System.out.print("-");
 		}
 		System.out.print("--\n");
@@ -43,14 +43,29 @@ public class Quest4 {
 		int pr = n - 1;
 
 		do {
+			System.out.printf("%3s|", "");
 			int pc = (pl + pr) / 2;
+			if (pl != pc)
+				System.out.printf(String.format("%%%ds<-%%%ds+", (pl * 4) + 1, (pc - pl) * 4), "", "");
+			else
+				System.out.printf(String.format("%%%ds<-+", pc * 4 + 1), "");
+			if (pc != pr)
+				System.out.printf(String.format("%%%ds->\n", (pr - pc) * 4 - 1), "");
+			else
+				System.out.println("->");
+			System.out.printf("%3d|", pc);
+
+			for (int i = 0; i < n; i++)
+				System.out.printf("%4d", arr[i]);
+			System.out.println("");
+
 			if (k < arr[pc])
 				pr = pc - 1;
 			else if (k > arr[pc])
 				pl = pc + 1;
-
 			else
 				return pc;
+
 		} while (pl <= pr);
 
 		return -1;
