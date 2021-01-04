@@ -12,27 +12,25 @@ public class Q2490 {
 
 		for (int i = 0; i < arr.length; i++) {
 			int cnt = 0;
-			arr[i] = s.nextLine();
-			String[] num = arr[i].split(" ");
-			for (String n : num) {
-				if (n.equals("0"))
-					cnt++;
+			for (int j = 0; j < 4; j++) {
+				// 1: 등, 0: 배
+				cnt += s.nextInt();
 			}
 			switch (cnt) {
-			case 0:
-				System.out.println("E");
+			case 0: // 윷
+				System.out.println("D");
 				break;
-			case 1:
-				System.out.println("A");
-				break;
-			case 2:
-				System.out.println("B");
-				break;
-			case 3:
+			case 1: // 걸
 				System.out.println("C");
 				break;
-			case 4:
-				System.out.println("D");
+			case 2: // 개
+				System.out.println("B");
+				break;
+			case 3: // 도
+				System.out.println("A");
+				break;
+			case 4: // 모
+				System.out.println("E");
 				break;
 			default:
 				break;
