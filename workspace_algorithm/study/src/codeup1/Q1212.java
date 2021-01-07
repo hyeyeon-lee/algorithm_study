@@ -11,30 +11,7 @@ public class Q1212 {
 		int b = s.nextInt();
 		int c = s.nextInt();
 
-		int l = 0;
-
-		if (a > b) {
-			if (b > c)
-				l = a;
-			else {
-				if (a > c)
-					l = a;
-				else
-					l = c;
-			}
-		} else {
-			if (a > c)
-				l = b;
-			else {
-				if (b > c)
-					l = b;
-				else
-					l = c;
-			}
-
-		}
-
-		if (a + b + c - l > l)
+		if (a + b > c && a + c > b && b + c > a)
 			System.out.println("yes");
 		else
 			System.out.println("no");
