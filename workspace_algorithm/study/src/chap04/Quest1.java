@@ -15,7 +15,7 @@ public class Quest1 {
 
 		while (true) {
 			System.out.println("현재 데이터 수 : " + s.size() + " / " + s.capacity());
-			System.out.println("(1) 푸시 (2) 팝 (3) 피크  (4) 덤프 (5) 검색 (6) 초기화 (0) 종료 : ");
+			System.out.println("(1) 푸시 (2) 팝 (3) 피크  (4) 덤프 (5) 검색 (6) 초기화 (7) 스택 정보 (0) 종료 : ");
 
 			int menu = stdIn.nextInt();
 			if (menu == 0)
@@ -68,6 +68,10 @@ public class Quest1 {
 				System.out.println("초기화 완료되었습니다.");
 				break;
 
+			case 7:
+				System.out.println("스택이 비어있는지: " + s.isEmpty());
+				System.out.println("스택이 가득차 있는지: " + s.isFull());
+				break;
 			}
 		}
 	}

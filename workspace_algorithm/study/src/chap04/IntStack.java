@@ -1,7 +1,5 @@
 package chap04;
 
-import java.util.EmptyStackException;
-
 public class IntStack {
 	// int형 스택
 
