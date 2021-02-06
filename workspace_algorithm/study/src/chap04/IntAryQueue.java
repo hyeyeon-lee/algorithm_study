@@ -54,14 +54,55 @@ public class IntAryQueue {
 		return x;
 	}
 
-	// 큐의 프론트 데이터 구하기
+	// 큐에서 데이터 피크 (큐에서 가장 위에 있는 항목 반환)
 	public int peek() throws EmptyIntAryQueueException {
-		int x = 0;
 		if (num <= 0)
 			throw new EmptyIntAryQueueException();
-		x = que[0];
+		return que[num - 1];
+	}
 
-		return x;
+	// 큐에서 데이터 찾기 (없으면 -1)
+	public int indexOf(int x) {
+		for (int i = 0; i < num; i++)
+			if (que[i] == x)
+				return i;
+		return -1;
+	}
+
+	// 큐를 비움
+	public void clear() {
+		num = 0;
+	}
+
+	// 큐의 용량을 반환
+	public int capacity() {
+		return max;
+	}
+
+	// 큐에 있는 데이터 수 반환
+	public int size() {
+		return num;
+	}
+
+	// 큐가 비어 있는지?
+	public boolean isEmpty() {
+		return num <= 0;
+	}
+
+	// 큐가 가득 차 있는지?
+	public boolean isFull() {
+		return num >= max;
+	}
+
+	// 큐에서 데이터를 앞 -> 뒤 순서로 출력
+	public void dump() {
+		if (num == 0)
+			System.out.println("큐가 비어 있습니다.");
+		else {
+			for (int i = 0; i < num; i++)
+				System.out.println(que[i] + " ");
+			System.out.println();
+		}
 	}
 
 	@Override

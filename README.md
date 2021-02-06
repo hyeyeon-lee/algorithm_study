@@ -321,3 +321,4 @@
 - Gstack
 - IntStackAB
 - IntAryQueue
+- IntQueue
