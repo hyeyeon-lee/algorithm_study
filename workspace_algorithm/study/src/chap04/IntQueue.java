@@ -35,30 +35,26 @@ public class IntQueue {
 
 	// 큐에 데이터를 인큐
 	public int enque(int x) throws OverflowIntQueueException {
-		if (num >= max)
-			throw new OverflowIntQueueException(); // 큐가 가득 참
+		if (num >= max) throw new OverflowIntQueueException(); // 큐가 가득 참
 		que[rear++] = x;
 		num++;
-		if (rear == max)
-			rear = 0;
+		if (rear == max) rear = 0;
 		return x;
 	}
 
 	// 큐에 데이터를 디큐
 	public int deque() throws EmptyIntQueueException {
-		if (num < 0)
-			throw new EmptyIntQueueException(); // 큐가 비어 있음
+		if (num < 0) throw new EmptyIntQueueException(); // 큐가 비어 있음
 		int x = que[front++];
 		num--;
-		if (front == max)
-			front = 0;
+		if (front == max) front = 0;
 		return x;
 	}
 
 	// 큐에서 데이터를 피크 (프론트 데이터를 들여다봄)
+	// 디큐할 데이터 훔쳐 보기
 	public int peek() throws EmptyIntQueueException {
-		if (num <= 0)
-			throw new EmptyIntQueueException(); // 큐가 비어 있음
+		if (num <= 0) throw new EmptyIntQueueException(); // 큐가 비어 있음
 		return que[front];
 	}
 
@@ -71,5 +67,41 @@ public class IntQueue {
 		}
 		return -1; // 검색 실패
 
+	}
+
+	// 큐를 비움
+	// 실제 배열 요소값을 비우진 않음
+	public void clear() {
+		num = front = rear = 0;
+	}
+
+	// 큐의 용량을 반환
+	public int capacity() {
+		return max;
+	}
+
+	// 큐에 쌓여 있는 데이터 수를 반환
+	public int size() {
+		return num;
+	}
+
+	// 큐가 비어 있나요?
+	public boolean isEmpty() {
+		return num <= 0;
+	}
+
+	// 큐가 가득 찼나요?
+	public boolean isFull() {
+		return num >= max;
+	}
+
+	// 큐 안의 모든 데이터를 프런트 -> 리어 순으로 출력
+	public void dump() {
+		if (num <= 0) System.out.println("큐가 비어 있습니다.");
+		else {
+			for (int i = 0; i < num; i++)
+				System.out.print(que[(i + front) % max] + " ");
+			System.out.println();
+		}
 	}
 }
