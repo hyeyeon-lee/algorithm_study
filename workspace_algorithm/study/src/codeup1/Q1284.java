@@ -8,37 +8,30 @@ public class Q1284 {
 		Scanner s = new Scanner(System.in);
 
 		int n = s.nextInt();
-		int a = n;
+		boolean flag = false;
 
-		int cnt = 0;
-		int gop = 1;
-
-		for (int i = 2; i <= a; i++) {
-			if (checkPrime(i) && a % i == 0) {
-				a /= i;
-				gop *= i;
-				cnt++;
-				if (cnt > 2 || n == gop)
+		for (int i = 2; i <= n; i++) {
+			// System.out.println(i);
+			if (n % i == 0) {
+				if (checkPrime(i) && checkPrime(n / i)) {
+					System.out.printf("%d %d", i, n / i);
+					flag = true;
 					break;
-				// System.out.printf("%d ", i);
+				}
 			}
 		}
 
-		if (cnt == 2 && gop == n) {
-			for (int i = 2; i <= n; i++) {
-				if (checkPrime(i) && n % i == 0) {
-					n /= i;
-					System.out.printf("%d ", i);
-				}
-			}
-		} else
+		if (!flag)
 			System.out.println("wrong number");
-
 	}
 
 	// 소수 판별
 	public static boolean checkPrime(int num) {
 		int cnt = 0;
+		if (num == 1)
+			return false; // 1은 소수가 아님
+		if (num == 2)
+			return true; // 2은 소수
 		for (int i = 1; i <= num; i++)
 			if (num % i == 0)
 				cnt++;
