@@ -330,4 +330,5 @@
 - Gstack
 - IntStackAB
 - IntAryQueue
-- IntQueue (보완 필요)
+- IntQueue
+- Quest2
