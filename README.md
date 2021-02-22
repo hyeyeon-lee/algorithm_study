@@ -334,3 +334,4 @@
 - IntQueue
 - Quest2
 - Gqueue
+- IntDeque
