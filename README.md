@@ -336,3 +336,4 @@
 - Quest2
 - Gqueue
 - IntDeque
+- LastNElement
