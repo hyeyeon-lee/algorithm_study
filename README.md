@@ -338,3 +338,7 @@
 - Gqueue
 - IntDeque
 - LastNElement
+
+### Chapter 05. 재귀 알고리즘
+
+- Factorial
