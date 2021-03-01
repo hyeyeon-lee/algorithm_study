@@ -344,3 +344,4 @@
 
 - Factorial
 - EuclidGCD
+- Quest1
