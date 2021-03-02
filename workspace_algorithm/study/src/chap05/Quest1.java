@@ -9,7 +9,7 @@ public class Quest1 {
 	// 양의 정수 n의 팩토리얼을 반환합니다.
 	static int factorial(int n) {
 		int result = 1;
-		while (n > 0)
+		while (n > 1) // 1일 때도 반복문을 거칠 필요가 없음
 			result *= n--;
 		return result;
 

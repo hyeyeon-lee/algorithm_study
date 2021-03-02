@@ -346,3 +346,4 @@
 - Factorial
 - EuclidGCD
 - Quest1
+- Quest2
