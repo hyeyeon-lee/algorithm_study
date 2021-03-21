@@ -365,3 +365,4 @@
 - RecurX2
 - Hanoi
 - Quest5
+- Quest6
