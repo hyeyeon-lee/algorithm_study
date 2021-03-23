@@ -366,5 +366,6 @@
 - RecurX1
 - RecurX2
 - Hanoi
-- Quest5
+- Quest5 (check)
 - Quest6
+- Quest7 (ing)
