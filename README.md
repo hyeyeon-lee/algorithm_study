@@ -370,4 +370,4 @@
 - Hanoi
 - Quest5 (check)
 - Quest6
-- Quest7 (ing)
+- Quest7 (check)
