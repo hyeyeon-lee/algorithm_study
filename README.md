@@ -375,4 +375,5 @@
 - Quest5 (check)
 - Quest6
 - Quest7 (check)
-- Queen8
+- QueenB
+- QueenBB
