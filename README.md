@@ -378,3 +378,4 @@
 - Quest7 (check)
 - QueenB
 - QueenBB
+- EightQueen
