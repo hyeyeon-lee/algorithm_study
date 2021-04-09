@@ -390,3 +390,4 @@
 - QueenB
 - QueenBB
 - EightQueen
+- Quest8 (check)
