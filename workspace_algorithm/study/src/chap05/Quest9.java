@@ -29,22 +29,31 @@ public class Quest9 {
 		// System.out.printf("%2d", pos[i]);
 	}
 
-	// i열 적당한 위치에 퀸 배치
+	// i열의 알맞은 위치에 퀸을 배치
 	static void set(int i) {
-		for (int j = 0; j < 8; j++) {
-			if (flag_a[j] == false && // 가로(j행)에 배치되지 않음
-					flag_b[i + j] == false && // 우상향 대각선에 아직 배치되지 않음
-					flag_c[i - j + 7] == false // 좌상향 대각선에 아직 배치되지 않음
-			) {
-				pos[i] = j;
-				if (i == 7) print();
-				else {
-					flag_a[j] = flag_b[i + j] = flag_c[i - j + 7] = true;
-					set(i + 1);
-					flag_a[j] = flag_b[i + j] = flag_c[i - j + 7] = false;
+		int j;
+		int[] jstk = new int[8];
 
+		Start: while (true) {
+			j = 0;
+			while (true) {
+				while (j < 8) {
+					if (!flag_a[j] && !flag_b[i + j] && !flag_c[i - j + 7]) {
+						pos[i] = j;
+						if (i == 7) // 모든 열에 배치 마침
+							print();
+						else {
+							flag_a[j] = flag_b[i + j] = flag_c[i - j + 7] = true;
+							jstk[i++] = j; // i 열의 행을 Push
+							continue Start;
+						}
+					}
+					j++;
 				}
-
+				if (--i == -1) return;
+				j = jstk[i]; // i 열의 행을 Pop
+				flag_a[j] = flag_b[i + j] = flag_c[i - j + 7] = false;
+				j++;
 			}
 		}
 	}
