@@ -395,3 +395,7 @@
 - EightQueen
 - Quest8
 - Quest9 (check)
+
+### Chapter 06. 정렬
+
+- BubbleSort
