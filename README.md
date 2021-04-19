@@ -400,3 +400,4 @@
 ### Chapter 06. 정렬
 
 - BubbleSort
+- BubbleSortLeft
