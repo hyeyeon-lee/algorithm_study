@@ -40,13 +40,19 @@ public class BubbleSortCount {
 	static void bubbleSort(int[] a, int n) {
 		for (int i = 0; i < n - 1; i++) {
 			System.out.printf("패스%d:\n", i + 1);
-			for (int j = 0; j <= n - 1; j++) {
-				System.out.printf("%4d", a[j]);
-			}
-			System.out.println();
 
-			for (int j = n - 1; j > 1; j--) {
-				if (a[j - 1] > a[j]) swap(a, j - 1, j);
+			for (int j = 0; j < n - 1; j++) {
+				for (int k = 0; k <= n - i - 1; k++) {
+
+					System.out.printf("%3d", a[k]);
+
+					/*
+					 * if (a[n - k - 1] > a[n - k]) { System.out.printf("%2s",
+					 * "+"); swap(a, n - k - 1, n - k); } else
+					 * System.out.printf("%2s", "-");
+					 */
+				}
+				System.out.println();
 			}
 
 		}
