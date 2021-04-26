@@ -38,24 +38,28 @@ public class BubbleSortCount {
 
 	// 버블 정렬
 	static void bubbleSort(int[] a, int n) {
+		int ccnt = 0; // 비교횟수
+		int scnt = 0; // 교환횟수
+
 		for (int i = 0; i < n - 1; i++) {
-			System.out.printf("패스%d:\n", i + 1);
+			System.out.printf("패스%d：\n", i + 1);
+			for (int j = n - 1; j > i; j--) {
+				for (int m = 0; m < n - 1; m++)
+					System.out.printf("%3d %c", a[m], (m != j - 1) ? ' ' : (a[j - 1] > a[j]) ? '+' : '-');
+				System.out.printf("%3d\n", a[n - 1]);
 
-			for (int j = 0; j < n - 1; j++) {
-				for (int k = 0; k <= n - i - 1; k++) {
-
-					System.out.printf("%3d", a[k]);
-
-					/*
-					 * if (a[n - k - 1] > a[n - k]) { System.out.printf("%2s",
-					 * "+"); swap(a, n - k - 1, n - k); } else
-					 * System.out.printf("%2s", "-");
-					 */
+				ccnt++;
+				if (a[j - 1] > a[j]) {
+					scnt++;
+					swap(a, j - 1, j);
 				}
-				System.out.println();
 			}
-
+			for (int m = 0; m < n; m++)
+				System.out.printf("%3d  ", a[m]);
+			System.out.println();
 		}
+		System.out.println("비교를 " + ccnt + "회 했습니다.");
+		System.out.println("교환를 " + scnt + "회 했습니다.");
 
 	}
 

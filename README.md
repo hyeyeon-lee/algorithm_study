@@ -406,4 +406,4 @@
 
 - BubbleSort
 - BubbleSortLeft
-- BubbleSortCount (ing)
+- BubbleSortCount (check)
