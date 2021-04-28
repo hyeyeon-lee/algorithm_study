@@ -408,3 +408,4 @@
 - BubbleSort
 - BubbleSortLeft
 - BubbleSortCount (check)
+- BubbleSort2
