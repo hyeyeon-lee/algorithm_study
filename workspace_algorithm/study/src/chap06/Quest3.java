@@ -2,8 +2,9 @@ package chap06;
 
 import java.util.Scanner;
 
-public class BubbleSortLeft {
-	// 버블 정렬 (버전 2) - 왼쪽부터
+public class Quest3 {
+	// 버블 정렬 (버전 2)
+	// 비교와 교환 과정을 자세히 표시
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -35,9 +36,20 @@ public class BubbleSortLeft {
 
 	// 버블 정렬
 	static void bubbleSort(int[] a, int n) {
-		for (int i = 0; i < n - 1; i++)
-			for (int j = i; j < n - i - 1; j++)
-				if (a[j] > a[j + 1]) swap(a, j, j + 1);
+		for (int i = 0; i < n - 1; i++) {
+			System.out.printf("패스 %d\n", i + 1);
+			int exchg = 0; // 패스 교환횟수 보관
+			for (int j = n - 1; j > i; j--) {
+				for (int m = 0; m < n - 1; m++)
+					System.out.printf("%3d %s", a[m], m != j - 1 ? " " : a[j - 1] > a[j] ? "+" : "-");
+				System.out.printf("%3d\n", a[n - 1]);
+				if (a[j - 1] > a[j]) {
+					swap(a, j - 1, j);
+					exchg++;
+				}
+				if (exchg == 0) break; // 교환 없으면 종료
+			}
+		}
 
 	}
 

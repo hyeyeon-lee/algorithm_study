@@ -2,7 +2,7 @@ package chap06;
 
 import java.util.Scanner;
 
-public class BubbleSortCount {
+public class Quest2 {
 	// 버블 정렬 (버전 1)
 	// 비교 과정을 자세히 출력
 	// 비교횟수, 교환횟수 출력

@@ -409,6 +409,7 @@
 ### Chapter 06. 정렬
 
 - BubbleSort
-- BubbleSortLeft
-- BubbleSortCount (check)
+- Quest1
+- Quest2
 - BubbleSort2
+- Quest3 (ing)
