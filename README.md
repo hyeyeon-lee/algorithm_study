@@ -417,3 +417,5 @@
 - BubbleSort2
 - Quest3
 - BubbleSort3
+-
+- SelectionSort
