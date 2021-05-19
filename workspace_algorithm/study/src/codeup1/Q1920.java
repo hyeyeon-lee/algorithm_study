@@ -9,16 +9,16 @@ public class Q1920 {
 		Scanner s = new Scanner(System.in);
 
 		int dec = s.nextInt();
-		toBinary(dec);
+		if (dec == 0) System.out.println(0);
+		else toBinary(dec);
 
 	}
 
 	public static void toBinary(int dec) {
-		dec /= 2;
-		if (dec != 0) {
-			System.out.print(dec % 2);
-			toBinary(dec);
-		} else System.out.print(dec);
+		if (dec > 0) toBinary(dec / 2);
+
+		if (dec == 0) System.out.print("");
+		else System.out.print(dec % 2);
 
 	}
 
