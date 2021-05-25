@@ -429,3 +429,4 @@
 - BubbleSort3
 - Quest4 (ing)
 - SelectionSort
+- InsertionSort (c)

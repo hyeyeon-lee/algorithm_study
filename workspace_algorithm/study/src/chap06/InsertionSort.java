@@ -20,6 +20,20 @@ public class InsertionSort {
 		Scanner stdIn = new Scanner(System.in);
 
 		System.out.println("단순 삽입 정렬");
+		System.out.print("요솟수 :");
+		int nx = stdIn.nextInt();
+		int[] x = new int[nx];
+
+		for (int i = 0; i < nx; i++) {
+			System.out.println("x[" + i + "]: ");
+			x[i] = stdIn.nextInt();
+		}
+
+		insertsionSort(x, nx);
+
+		System.out.println("오름차순 정렬 완료");
+		for (int i = 0; i < nx; i++)
+			System.out.println("x[" + i + "]= " + x[i]);
 	}
 
 }
