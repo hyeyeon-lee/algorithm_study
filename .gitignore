@@ -4,3 +4,4 @@ workspace_algorithm/study/bin
 workspace_algorithm/study/.*
 workspace_algorithm/.idea/
 .idea/
+out/
